@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 // 1. Importe o componente da View
 import HomeView from '@/views/HomeView.vue' 
+import ModalComponent from '@/views/components/ModalComponent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +11,12 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+    },
+    {
+      path: '/acesso',
+      name: 'acesso',
+      component: ModalComponent
     }
   ],
 })
