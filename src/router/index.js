@@ -12,11 +12,6 @@ const router = createRouter({
       path: '/home',
       name: 'home',
       component: HomeView,
-    },
-    {
-      path: '/acesso',
-      name: 'acesso',
-      component: ModalComponent
     }
   ],
 })
