@@ -1,11 +1,22 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue'
+import FooterComponent from './components/FooterComponent.vue'
+// import NavComponent from './components/NavComponent.vue' 
+
+onMounted(() => {
+  console.log('App montado com sucesso')
+})
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+    <header>
+      <NavComponent />
+    </header>
 
-<style scoped></style>
+    <main class="flex-1 mt-15"> <router-view />
+    </main>
+
+    <footer>
+      <FooterComponent />
+    </footer>
+</template>
